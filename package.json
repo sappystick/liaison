@@ -1,0 +1,53 @@
+{
+  "name": "liaison-platform",
+  "version": "2.0.0",
+  "description": "Revolutionary AI Agent NFT Platform with Sacred Geometry Avatars, Quantum Processing, and Hardware Integration",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:ai\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:ai": "cd ai-engine && python -m uvicorn main:app --reload --port 8000",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "npm run start:backend",
+    "start:backend": "cd backend && npm start",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "setup": "./scripts/setup-liaison.sh",
+    "deploy": "./scripts/deploy-production.sh"
+  },
+  "keywords": [
+    "AI",
+    "NFT",
+    "blockchain",
+    "sacred-geometry",
+    "quantum-computing",
+    "USB-deployment",
+    "agent-breeding",
+    "ethereum",
+    "machine-learning"
+  ],
+  "author": "lIAison Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sappystick/liaison.git"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.8.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=10.0.0"
+  }
+}
